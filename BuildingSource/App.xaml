@@ -1,0 +1,70 @@
+﻿<Application x:Class="BuildingSource.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BuildingSource"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <Style TargetType="TextBlock">
+
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontFamily" Value="Roboto"/>
+            <Setter Property="FontSize" Value="20"/>
+
+        </Style>
+
+        <Style TargetType="StackPanel">
+
+            <Setter Property="Margin" Value="10"/>
+
+        </Style>
+
+        <Style TargetType="DatePicker">
+
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontFamily" Value="Roboto"/>
+            <Setter Property="FontSize" Value="20"/>
+
+        </Style>
+
+        <Style TargetType="TextBox">
+
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="FontFamily" Value="Roboto"/>
+            <Setter Property="FontSize" Value="20"/>
+
+        </Style>
+
+        <Style TargetType="ComboBox">
+
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontFamily" Value="Roboto"/>
+            <Setter Property="FontSize" Value="20"/>
+
+        </Style>
+
+        <Style TargetType="PasswordBox">
+
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontFamily" Value="Roboto"/>
+            <Setter Property="FontSize" Value="20"/>
+
+        </Style>
+
+        <Style TargetType="Button">
+
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontFamily" Value="Roboto"/>
+            <Setter Property="FontSize" Value="20"/>
+
+        </Style>
+
+        <Style TargetType="DataGridCell">
+
+            <Setter Property="FontFamily" Value="Roboto"/>
+            <Setter Property="FontSize" Value="20"/>
+
+        </Style>
+
+    </Application.Resources>
+</Application>

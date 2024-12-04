@@ -1,0 +1,58 @@
+﻿<Window x:Class="BuildingSource.Comparison"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BuildingSource"
+        mc:Ignorable="d"
+        Title="Comparison" Height="550" Width="1150">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="320*"/>
+            <RowDefinition Height="55*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="10,10,10,10">
+            <TextBlock Text="Сравнение тарифов" FontWeight="Bold"/>
+            <Button Name="BackButton" Click="BackButton_Click" Content="Назад"/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" Margin="10,10,10,10">
+            <StackPanel Orientation="Horizontal" >
+                <StackPanel Name="RepairTypeStackPanel" Orientation="Vertical">
+                    <TextBlock Text="Название"/>
+                </StackPanel>
+
+                <StackPanel Name="ObjectTypeStackPanel" Orientation="Vertical">
+                    <TextBlock Text="Объект"/>
+                </StackPanel>
+
+                <StackPanel Name="SquareStackPanel" Orientation="Vertical">
+                    <TextBlock Text="Площадь"/>
+                </StackPanel>
+
+                <StackPanel Name="DesignerStackPanel" Orientation="Vertical">
+                    <TextBlock Text="Выезд дизайнера"/>
+                </StackPanel>
+
+                <StackPanel Name="EngeneerStackPanel" Orientation="Vertical">
+                    <TextBlock Text="Выезд инженера"/>
+                </StackPanel>
+
+                <StackPanel Name="FullPriceStackPanel" Orientation="Vertical">
+                    <TextBlock Text="Итог"/>
+                </StackPanel>
+
+                <StackPanel Name="OrderStackPanel" Orientation="Vertical"/>
+
+                <StackPanel Name="DeleteStackPanel" Orientation="Vertical"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <Grid Grid.Row="2" Grid.Column="0" Margin="0,5,0,0">
+            <Button Content="Сформировать отчет" Name="ReportButton" Click="ReportButton_Click" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        </Grid>
+
+    </Grid>
+</Window>

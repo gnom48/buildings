@@ -1,0 +1,102 @@
+﻿<Window x:Class="BuildingSource.RepairCalc"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BuildingSource"
+        mc:Ignorable="d"
+        Title="RepairCalc" Height="800" Width="800">
+    <Grid>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
+
+            <Grid HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="КАЛЬКУЛЯТОР РЕМОНТА" FontWeight="Bold" Grid.Column="0"/>
+                <Button Content="Назад" Width="300" Grid.Column="1"/>
+
+            </Grid>
+
+            <StackPanel Orientation="Horizontal">
+
+                <ComboBox Name="RepairTypeCompoBox" Width="250" Text="Тип ремонта" SelectionChanged="RepairTypeCompoBox_SelectionChanged">
+                    <ComboBoxItem Content="Косметический" IsSelected="True"/>
+                    <ComboBoxItem Content="Капитальный"/>
+                    <ComboBoxItem Content="Дизайнерский"/>
+                </ComboBox>
+
+                <RadioButton Name="HouseRadiobutton" Content="Дом" GroupName="ObjectType" Checked="HouseRadiobutton_Checked" IsChecked="True"/>
+                <RadioButton Name="FlatRadiobutton" Content="Квартира" GroupName="ObjectType" Checked="HouseRadiobutton_Checked"/>
+                <RadioButton Name="RoomRadiobutton" Content="Комната" GroupName="ObjectType" Checked="HouseRadiobutton_Checked"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <TextBlock Text="Общая площадь"/>
+
+                <TextBox Name="STextBox" Width="70" TextChanged="STextBox_TextChanged"/>
+
+                <TextBlock Text="м2"/>
+                
+            </StackPanel>
+
+            <Slider Value="50" Minimum="1" Maximum="100" Name="SSlider" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="SSlider_ValueChanged"/>
+
+            <StackPanel Orientation="Horizontal">
+
+                <TextBlock Text="Адрес"/>
+
+                <TextBox Name="AddressTextBox" TextChanged="AddressTextBox_TextChanged" Width="500"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <CheckBox Name="WithDesigner" Content="Выезд дизайнера" Checked="WithDesigner_Checked" Unchecked="WithDesigner_Unchecked"/>
+
+                <TextBox Name="WithDesignerPrice" IsReadOnly="True" Width="200"/>
+
+                <TextBlock Text="руб" />
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <CheckBox Name="WithIngeneer" Content="Выезд инженера/бригадира" Checked="WithIngeneer_Checked" Unchecked="WithIngeneer_Unchecked"/>
+
+                <TextBox Name="WithIngeneerPrice" IsReadOnly="True" Width="200"/>
+                
+                <TextBlock Text="руб" />
+
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                
+                <TextBlock Text="Итоговая стоисмость" FontWeight="Bold"/>
+
+                <TextBox Name="FullPriceTextBox" IsReadOnly="True" Width="200"/>
+                
+                <TextBlock Text="руб" />
+
+            </StackPanel>
+
+            <Grid HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Content="Добавить в сравнение" Width="300" Grid.Column="0" Name="AddToComparisonButton" Click="AddToComparisonButton_Click"/>
+                <Button Content="Сравнить / заказать" Width="300" Grid.Column="1" Name="OrderButton" Click="OrderButton_Click"/>
+
+            </Grid>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
